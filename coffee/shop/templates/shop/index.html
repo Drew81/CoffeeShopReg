@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<body>
+<div class="bgimg-1">
+  <div class="caption">
+    <span class="border"></span>
+  </div>
+</div>
+
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+  <h3 style="text-align:center;">About us.</h3>
+  <p>We are a neighborhood nook where friendly folks come to enjoy and share their love of coffee, tea, hot chocolate, with some warm pastries and desserts. Our ambiance is calming, designed to give you a much needed moment for pause, a place to do nothing at all. Our space is ideal to meet and blend with others, a date with a friend, sit by the fireplace and stay warm, play a game of chess or checkers, do some work on your laptop, or just grab a cup on the go. Make a date with us!</p>
+</div>
+
+<div class="bgimg-2">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">Our coffee selections.</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:black;background-color:#282E34;text-align:center;padding:50px 200px;text-align: justify;">
+
+
+    <div id="coffee" class="container">
+      <div class="col-md-4">
+          {% for coffee in all_coffees %}
+                 <img src="{{ coffee.image.url }}" width="200">
+          <li>{{ coffee.name }}</li>
+          {% endfor %}
+      </div>
+  </div>
+</div>
+
+
+<div class="bgimg-4">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">Tasty treats!</span><div class="container">
+
+    </div>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+  </div>
+</div>
+
+<div class="bgimg-3">
+  <div class="caption">
+    <span class="border">Thank you!</span>
+  </div>
+</div>
+{% endblock %}
+</body>
+
+</html>
